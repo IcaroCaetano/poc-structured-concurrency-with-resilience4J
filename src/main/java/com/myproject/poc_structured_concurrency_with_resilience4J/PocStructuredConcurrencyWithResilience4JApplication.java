@@ -1,13 +1,26 @@
 package com.myproject.poc_structured_concurrency_with_resilience4J;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.myproject.poc_structured_concurrency_with_resilience4J.context.RequestContext;
+import com.myproject.poc_structured_concurrency_with_resilience4J.service.FraudAnalysisService;
 
-@SpringBootApplication
+import java.util.UUID;
+
 public class PocStructuredConcurrencyWithResilience4JApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PocStructuredConcurrencyWithResilience4JApplication.class, args);
+	static void main(String[] args) {
+
+		var requestId = UUID.randomUUID().toString();
+
+		ScopedValue.where(RequestContext.REQUEST_ID, requestId)
+				.run(() -> {
+
+					var fraudAnalysisService = new FraudAnalysisService();
+
+					var response = fraudAnalysisService.analyze("12345678900");
+
+					System.out.println("\nFINAL RESPONSE");
+					System.out.println(response);
+				});
 	}
 
 }

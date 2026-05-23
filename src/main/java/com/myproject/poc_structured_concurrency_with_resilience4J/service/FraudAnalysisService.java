@@ -11,8 +11,7 @@ public class FraudAnalysisService {
 
     private final LivenessService livenessService = new LivenessService();
 
-    private final BureauService bureauService =
-            new BureauService();
+    private final BureauService bureauService = new BureauService();
 
     public FraudAnalysisResponse analyze(String cpf) {
 
