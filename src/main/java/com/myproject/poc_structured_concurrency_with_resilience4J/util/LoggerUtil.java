@@ -1,5 +1,7 @@
 package com.myproject.poc_structured_concurrency_with_resilience4J.util;
 
+import com.myproject.poc_structured_concurrency_with_resilience4J.context.RequestContext;
+
 public class LoggerUtil {
 
     public static void log(String message) {
