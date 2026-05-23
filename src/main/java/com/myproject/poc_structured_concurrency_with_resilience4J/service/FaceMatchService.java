@@ -43,13 +43,9 @@ public class FaceMatchService {
 
             if (attempt < 3) {
 
-                LoggerUtil.log(
-                        "Face Match FAILED - retrying..."
-                );
+                LoggerUtil.log("Face Match FAILED - retrying...");
 
-                throw new RuntimeException(
-                        "Temporary Face Match error"
-                );
+                throw new RuntimeException("Temporary Face Match error");
             }
 
             LoggerUtil.log("Face Match SUCCESS");
