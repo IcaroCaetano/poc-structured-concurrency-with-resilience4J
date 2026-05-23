@@ -2,9 +2,9 @@
 
 package com.myproject.poc_structured_concurrency_with_resilience4J.service;
 
-import com.myproject.poc_structured_concurrency.config.ResilienceConfig;
-import com.myproject.poc_structured_concurrency.dto.FaceMatchResponse;
-import com.myproject.poc_structured_concurrency.util.LoggerUtil;
+
+import com.myproject.poc_structured_concurrency_with_resilience4J.config.ResilienceConfig;
+import com.myproject.poc_structured_concurrency_with_resilience4J.dto.FaceMatchResponse;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.decorators.Decorators;
 import io.github.resilience4j.retry.Retry;
