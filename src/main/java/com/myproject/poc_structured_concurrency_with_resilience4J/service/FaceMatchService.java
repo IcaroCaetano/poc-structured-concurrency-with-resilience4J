@@ -1,5 +1,3 @@
-// service/FaceMatchService.java
-
 package com.myproject.poc_structured_concurrency_with_resilience4J.service;
 
 
@@ -16,14 +14,11 @@ import java.util.function.Supplier;
 
 public class FaceMatchService {
 
-    private final CircuitBreaker circuitBreaker =
-            ResilienceConfig.createCircuitBreaker("face-match");
+    private final CircuitBreaker circuitBreaker = ResilienceConfig.createCircuitBreaker("face-match");
 
-    private final Retry retry =
-            ResilienceConfig.createRetry("face-match");
+    private final Retry retry = ResilienceConfig.createRetry("face-match");
 
-    private final AtomicInteger counter =
-            new AtomicInteger();
+    private final AtomicInteger counter = new AtomicInteger();
 
     public FaceMatchResponse analyze(String cpf) {
 
