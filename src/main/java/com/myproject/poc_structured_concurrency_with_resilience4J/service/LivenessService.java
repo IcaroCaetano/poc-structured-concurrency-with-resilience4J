@@ -10,8 +10,7 @@ import java.util.function.Supplier;
 
 public class LivenessService {
 
-    private final CircuitBreaker circuitBreaker =
-            ResilienceConfig.createCircuitBreaker("liveness");
+    private final CircuitBreaker circuitBreaker = ResilienceConfig.createCircuitBreaker("liveness");
 
     public LivenessResponse analyze(String cpf) {
 
