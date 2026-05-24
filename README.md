@@ -64,3 +64,15 @@ Cada integração:
 - pode ficar indisponível.
 
 O objetivo desta POC é demonstrar como o Java 25 resolve esse problema utilizando um modelo moderno de concorrência estruturada.
+
+### Fluxo da aplicação
+
+1. A execução inicia na Main
+
+A classe Main:
+
+- gera um requestId,
+- propaga o contexto usando ScopedValue,
+- inicia o fluxo principal da análise antifraude.
+
+Exemplo:
