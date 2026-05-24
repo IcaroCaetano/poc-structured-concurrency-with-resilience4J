@@ -21,6 +21,8 @@ O projeto simula um fluxo de análise antifraude que consulta múltiplos provedo
 - Propagação de contexto
 Resiliência com Resilience4j
 
+## Arquitetura  
+
 ````
 Request
    |
@@ -39,3 +41,9 @@ FraudAnalysisService
            ├── Timeout
            └── Fallback
 ````
+
+### Cenário de negócio
+
+Em plataformas de prevenção a fraude, uma única requisição normalmente depende de várias integrações externas.
+
+Exemplo:
