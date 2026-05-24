@@ -152,3 +152,5 @@ public class FraudAnalysisService {
     }
 }
 ```
+
+#### 3. O StructuredTaskScope cria o escopo concorrente
