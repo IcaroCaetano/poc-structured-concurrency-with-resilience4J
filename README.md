@@ -10,6 +10,17 @@ O projeto simula um fluxo de análise antifraude que consulta múltiplos provedo
 - Liveness
 - Bureau Score
 
+#### Além disso, a POC também demonstra:
+
+- Virtual Threads
+- Scoped Values
+- Retry
+- Circuit Breaker
+- Timeout
+- Fallback
+- Propagação de contexto
+Resiliência com Resilience4j
+
 ````
 Request
    |
