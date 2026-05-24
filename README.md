@@ -67,7 +67,7 @@ O objetivo desta POC é demonstrar como o Java 25 resolve esse problema utilizan
 
 ### Fluxo da aplicação
 
-1. A execução inicia na Main
+#### 1. A execução inicia na Main
 
 A classe Main:
 
@@ -101,3 +101,12 @@ public class PocStructuredConcurrencyWithResilience4JApplication {
 
 }
 ```
+
+#### 2. A FraudAnalysisService coordena todo o processamento
+
+A FraudAnalysisService:
+
+- abre o escopo estruturado,
+- cria as subtarefas concorrentes,
+- aguarda os resultados,
+consolida as respostas.
