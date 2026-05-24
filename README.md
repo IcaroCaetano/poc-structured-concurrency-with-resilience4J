@@ -55,3 +55,12 @@ Fraud Analysis
     +--> Liveness Provider
     +--> Bureau Provider
 ```
+
+Cada integração:
+
+- possui latência diferente,
+- pode falhar,
+- pode sofrer timeout,
+- pode ficar indisponível.
+
+O objetivo desta POC é demonstrar como o Java 25 resolve esse problema utilizando um modelo moderno de concorrência estruturada.
