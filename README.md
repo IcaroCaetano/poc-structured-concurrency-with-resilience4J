@@ -47,3 +47,11 @@ FraudAnalysisService
 Em plataformas de prevenção a fraude, uma única requisição normalmente depende de várias integrações externas.
 
 Exemplo:
+
+```
+Fraud Analysis
+    |
+    +--> Face Match Provider
+    +--> Liveness Provider
+    +--> Bureau Provider
+```
