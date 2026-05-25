@@ -200,3 +200,39 @@ O fluxo principal:
 - aguarda todas as subtarefas,
 - mantém controle centralizado do processamento,
 - garante sincronização estruturada.
+
+### A aplicação consolida todas as respostas em um único objeto.
+
+Antes da Structured Concurrency, concorrência normalmente era feita utilizando:
+
+- ExecutorService
+- Future
+- CompletableFuture
+
+Isso gerava diversos problemas arquiteturais.
+
+### Problema 1 — Threads órfãs
+
+As tarefas podiam continuar executando mesmo após:
+
+- timeout,
+- falha,
+- cancelamento da operação principal.
+
+Isso gerava:
+
+- desperdício de CPU,
+- vazamento de recursos,
+- processamento desnecessário
+
+### Problema 2 — Lifecycle descentralizado
+
+O gerenciamento manual exigia:
+
+- shutdown()
+- awaitTermination()
+- cancel()
+- tratamento manual de exceções.
+
+A lógica concorrente ficava espalhada no código.
+
