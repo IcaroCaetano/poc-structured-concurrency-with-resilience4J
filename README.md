@@ -236,3 +236,14 @@ O gerenciamento manual exigia:
 
 A lógica concorrente ficava espalhada no código.
 
+### Problema 3 — Baixa legibilidade
+
+A relação entre:
+
+- tarefa pai,
+- tarefas filhas,
+- sincronização,
+- cancelamento
+
+não era explícita.
+
