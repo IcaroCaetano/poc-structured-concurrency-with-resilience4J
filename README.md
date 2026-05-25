@@ -247,3 +247,10 @@ A relação entre:
 
 não era explícita.
 
+### Problema 4 — Propagação de contexto complexa
+
+Em modelos antigos de concorrência:
+
+- contexto era facilmente perdido,
+- correlation IDs precisavam ser propagados manualmente,
+- ThreadLocal gerava problemas em cenários concorrentes.
