@@ -186,3 +186,17 @@ Cada fork():
 - cria uma Virtual Thread,
 - registra a task dentro do scope,
 - executa as integrações em paralelo
+
+#### 5. O join() sincroniza o processamento
+
+````
+scope.join();
+````
+
+scope.join();
+
+O fluxo principal:
+
+- aguarda todas as subtarefas,
+- mantém controle centralizado do processamento,
+- garante sincronização estruturada.
