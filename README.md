@@ -154,3 +154,13 @@ public class FraudAnalysisService {
 ```
 
 #### 3. O StructuredTaskScope cria o escopo concorrente
+
+````
+try (var scope = StructuredTaskScope.open()) {
+````
+Neste momento:
+
+- um escopo estruturado é criado,
+- todas as subtarefas passam a pertencer ao mesmo contexto,
+- o lifecycle concorrente passa a ser coordenado centralmente.
+
