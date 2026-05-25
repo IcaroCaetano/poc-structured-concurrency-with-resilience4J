@@ -164,3 +164,25 @@ Neste momento:
 - todas as subtarefas passam a pertencer ao mesmo contexto,
 - o lifecycle concorrente passa a ser coordenado centralmente.
 
+#### 4. Os serviços são executados concorrentemente
+
+Cada integração é criada através de:
+
+````
+scope.fork(...)
+````
+
+Exemplo:
+
+````
+var faceTask = scope.fork(() -> faceMatchService.analyze(cpf));
+
+var livenessTask = scope.fork(() -> livenessService.analyze(cpf));
+
+var bureauTask = scope.fork(() -> bureauService.analyze(cpf));
+````
+Cada fork():
+
+- cria uma Virtual Thread,
+- registra a task dentro do scope,
+- executa as integrações em paralelo
